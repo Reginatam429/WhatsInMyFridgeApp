@@ -1,4 +1,5 @@
 # WhatsInMyFridgeApp
+![](/readmeAssets/logo.png)
 # Overview
 
 What's In My Fridge is an application that allows users to save money by using their fridge ingredients to find delicious recipes and prevent food waste!
@@ -27,6 +28,9 @@ To install this app, please install the project dependencies and run it locally.
 ## Wireframes and User Stories
 
 https://trello.com/b/t4oVJpvk/whats-in-my-fridge-app
+
+![Data Model](/readmeAssets/datamodel.png)
+![User Flow](/readmeAssets/userflow.png)
 
 ## Difficulties and Future Development
 
