@@ -31,9 +31,11 @@ More information and details can be found on [Trello](https://trello.com/b/t4oVJ
 
 
 Data Model:
+
 ![Data Model](/readmeAssets/datamodel.png)
 
 User Flow:
+
 ![User Flow](/readmeAssets/userflow.png)
 
 
