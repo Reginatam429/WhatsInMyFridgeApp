@@ -19,7 +19,7 @@ Frameworks
 - Node.js
 
 ## Installation
-To install this app, please install the project dependencies and run it locally. What's In My Fridge is currently hosted on [Heroku](https://whats-in-myfridge.herokuapp.com/)
+To install this app, please install the project dependencies and run it locally. What's In My Fridge is currently hosted on [Heroku](https://whats-in-myfridge.herokuapp.com/).
 
 - More instructions on installation to come...
 - clone the repo
@@ -27,10 +27,16 @@ To install this app, please install the project dependencies and run it locally.
 
 ## Wireframes and User Stories
 
-https://trello.com/b/t4oVJpvk/whats-in-my-fridge-app
+More information and details can be found on [Trello](https://trello.com/b/t4oVJpvk/whats-in-my-fridge-app).
 
+
+Data Model:
 ![Data Model](/readmeAssets/datamodel.png)
+
+User Flow:
 ![User Flow](/readmeAssets/userflow.png)
+
 
 ## Difficulties and Future Development
 
+TBD...
