@@ -14,20 +14,20 @@ app.use(
 app.get('/', (request, response) => {
     response.json({ info: 'Setting up your fridge systems in: Node.js, Express, and Postgres API' })
 })
-
+//User table
 app.get('/users/:id', db.getUser)
 app.post('/users', db.createUser)
 app.put('/users/:id', db.updateUser)
 app.delete('/users/:id', db.deleteUser)
-
+//Ingredient table
 app.get('/users/:id/ingredients', db.getIngredient)
 app.post('/users/:id/ingredients', db.createIngredient)
 app.delete('/users/:user_id/ingredients/:id', db.deleteIngredient)
-
+//favoritedRecipes table
 app.get('/users/:id/recipes', db.getFavRecipe)
 app.post('/users/:id/recipes', db.createFavRecipe)
 app.put('/users/:id/recipes/:id', db.updateFavRecipe)
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Refridgerator is running on port ${port}.`)
  })
