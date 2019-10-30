@@ -1,9 +1,9 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'tpl619_2',
+  user: process.env.PGUSER,
   host: 'localhost',
-  database: 'fridgeapp',
-  password: 'password',
+  database:'fridgeapp',
+  password: process.env.PGPASSWORD,
   port: 5432,
 })
 
@@ -20,7 +20,7 @@ const pool = new Pool({
   }
   
   const createUser = (request, response) => {
-    const { name, email } = request.body
+    const { username, email, auth0_id} = request.body
   
     pool.query('INSERT INTO users (username, email, auth0_id) VALUES ($1, $2, $3)', [username, email, auth0_id], (error, results) => {
       if (error) {
