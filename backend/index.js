@@ -1,3 +1,10 @@
+//production dependencies
+const helmet = require('helmet') //helmet - secure HTTP headers in an Express app
+const compression = require('compression') //compression - compression middleware
+//const rateLimit = require('express-rate-limit') //express-rate-limit - limit repeated requests to endpoints
+//const { body, check } = require('express-validator') //express-validator - string validators and santizers
+
+//original dependencies
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
@@ -11,6 +18,11 @@ app.use(
   })
 )
 
+//production 
+app.use(compression())
+app.use(helmet())
+
+//main
 app.get('/', (request, response) => {
     response.json({ info: 'Setting up your fridge systems in: Node.js, Express, and Postgres API' })
 })
