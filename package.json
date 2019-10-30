@@ -4,8 +4,8 @@
   "description": "RESTful API with Node.js, Express, and PostgreSQL",
   "main": "backend/index.js",
   "scripts": {
-    "start": "node index.js",
-    "start:dev": "nodemon index.js",
+    "start": "node backend/index.js",
+    "start:dev": "nodemon backend/index.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
