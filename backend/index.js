@@ -22,11 +22,11 @@ app.delete('/users/:id', db.deleteUser)
 
 app.get('/users/:id/ingredients', db.getIngredient)
 app.post('/users/:id/ingredients', db.createIngredient)
-app.delete('/users/:id/ingredients', db.deleteIngredient)
+app.delete('/users/:user_id/ingredients/:id', db.deleteIngredient)
 
 app.get('/users/:id/recipes', db.getFavRecipe)
 app.post('/users/:id/recipes', db.createFavRecipe)
-app.put('/users/:id/recipes', db.updateFavRecipe)
+app.put('/users/:id/recipes/:id', db.updateFavRecipe)
 
 app.listen(port, () => {
     console.log(`Refridgerator is running on port ${port}.`)
