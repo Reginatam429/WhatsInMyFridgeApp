@@ -1,9 +1,9 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
-  user: DB_USER,
-  host: DB_HOST,
-  database: DB_NAME,
-  password: DB_PASSWORD,
+  user: 'tpl619_2',
+  host: 'localhost',
+  database: 'fridgeapp',
+  password: 'password',
   port: 5432,
 })
 
@@ -58,7 +58,7 @@ const pool = new Pool({
   }
 
   const getIngredient = (request, response) => {
-    const id = parseInt(request.params.id)
+    const user_id = parseInt(request.params.id)
   
     pool.query('SELECT * FROM ingredients WHERE user_id = $1', [user_id], (error, results) => {
       if (error) {
@@ -91,7 +91,7 @@ const pool = new Pool({
   }
 
   const getFavRecipe = (request, response) => {
-    const id = parseInt(request.params.id)
+    const user_id = parseInt(request.params.id)
   
     pool.query('SELECT * FROM favoritedRecipes WHERE user_id = $1', [user_id], (error, results) => {
       if (error) {
