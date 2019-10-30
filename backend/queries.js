@@ -102,7 +102,7 @@ const pool = new Pool({
   }
 
   const createFavRecipe = (request, response) => {
-    const {user_id, ingredient_name, category, added_date, expiration_date, amount } = request.body
+    const {user_id, recipe_name, unfavorited} = request.body
   
     pool.query('INSERT INTO ingredients (user_id, recipe_name, unfavorited) VALUES ($1, $2, $3)', [user_id, recipe_name, unfavorited], (error, results) => {
       if (error) {
