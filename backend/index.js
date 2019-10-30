@@ -1,6 +1,6 @@
 //production dependencies
-const helmet = require('helmet') //helmet - secure HTTP headers in an Express app
-const compression = require('compression') //compression - compression middleware
+// const helmet = require('helmet') //helmet - secure HTTP headers in an Express app
+// const compression = require('compression') //compression - compression middleware
 //const rateLimit = require('express-rate-limit') //express-rate-limit - limit repeated requests to endpoints
 //const { body, check } = require('express-validator') //express-validator - string validators and santizers
 
@@ -10,6 +10,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 const db = require('./queries')
+const path = require('path')
 
 app.use(bodyParser.json())
 app.use(
@@ -19,8 +20,15 @@ app.use(
 )
 
 //production 
-app.use(compression())
-app.use(helmet())
+// app.use(compression())
+// app.use(helmet())
+
+if (process.env.NODE_ENV === 'production') {
+    //Static file declaration
+    app.use(express.static(path.join(__dirname, '../client/build')));
+    //build mode 
+    app.get('*', (req, res) => { res.sendfile(path.join(__dirname = '../client/build/index.html')); })
+  }
 
 //main
 app.get('/', (request, response) => {
