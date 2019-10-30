@@ -32,11 +32,11 @@ const pool = new Pool({
   
   const updateUser = (request, response) => {
     const id = parseInt(request.params.id)
-    const { username, email } = request.body
+    const { username, email, auth0_id } = request.body
   
     pool.query(
-      'UPDATE users SET name = $1, email = $2 WHERE id = $3',
-      [id, username, email, auth0_id],
+      'UPDATE users SET username = $1, email = $2, auth0_id = $3 WHERE id = $4',
+      [username, email, auth0_id, id],
       (error, results) => {
         if (error) {
           throw error
@@ -75,7 +75,7 @@ const pool = new Pool({
       if (error) {
         throw error
       }
-      response.status(201).send(`New ingredient added with ID: ${result.insertId}`)
+      response.status(201).send(`New ingredient added with ID: ${results.insertId}`)
     })
   }
 
@@ -104,11 +104,11 @@ const pool = new Pool({
   const createFavRecipe = (request, response) => {
     const {user_id, recipe_name, unfavorited} = request.body
   
-    pool.query('INSERT INTO ingredients (user_id, recipe_name, unfavorited) VALUES ($1, $2, $3)', [user_id, recipe_name, unfavorited], (error, results) => {
+    pool.query('INSERT INTO favoritedRecipes (user_id, recipe_name, unfavorited) VALUES ($1, $2, $3)', [user_id, recipe_name, unfavorited], (error, results) => {
       if (error) {
         throw error
       }
-      response.status(201).send(`New favorited recipe added with ID: ${result.insertId}`)
+      response.status(201).send(`New favorited recipe added with ID: ${results.insertId}`)
     })
   }
 
@@ -117,8 +117,8 @@ const pool = new Pool({
     const { user_id, recipe_name, unfavorited } = request.body
   
     pool.query(
-      'UPDATE users SET user_id = $1, recipe_name = $2 WHERE unfavorited = $3',
-      [user_id, recipe_name, unfavorited],
+      'UPDATE favoritedRecipes SET user_id = $1, recipe_name = $2, unfavorited = $3 WHERE  id = $4',
+      [user_id, recipe_name, unfavorited, id],
       (error, results) => {
         if (error) {
           throw error
