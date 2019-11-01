@@ -1,13 +1,21 @@
 require('dotenv').config()
 
-const Pool = require('pg').Pool
+//Local Dev
+// const Pool = require('pg').Pool
+// const pool = new Pool({
+//   user: process.env.PGUSER,
+//   host: process.env.PGHOST,
+//   database:'fridgeapp',
+//   password: process.env.PGPASSWORD,
+//   port: 5432,
+// })
+
+//Heroku Dev
+const { Pool } = require('pg');
 const pool = new Pool({
-  user: process.env.PGUSER,
-  host: process.env.PGHOST,
-  database:'fridgeapp',
-  password: process.env.PGPASSWORD,
-  port: 5432,
-})
+  connectionString: process.env.DATABASE_URL,
+  ssl: true
+});
 
   
   const getUser = (request, response) => {
@@ -15,6 +23,7 @@ const pool = new Pool({
   
     pool.query('SELECT * FROM users WHERE id = $1', [id], (error, results) => {
       if (error) {
+        console.log(process.env.DATABASE_URL)
         throw error
       }
       response.status(200).json(results.rows)

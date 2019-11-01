@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "RESTful API with Node.js, Express, and PostgreSQL",
   "main": "index.js",
+  "engines": {
+    "node": "12.10.0",
+    "npm": "6.11.3"
+  },
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon index.js",
+    "heroku-postbuild": "npm install --production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
