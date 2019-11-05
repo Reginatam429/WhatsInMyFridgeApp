@@ -4,7 +4,7 @@
 
 What's In My Fridge is an application that allows users to save money by using their fridge ingredients to find delicious recipes and prevent food waste!
 
-https://whats-in-myfridge.herokuapp.com/
+> https://whats-in-myfridge.herokuapp.com/
 
 ## Techstack
 
@@ -19,7 +19,8 @@ Frameworks
 - Node.js
 
 ## Installation
-To install this app, please install the project dependencies and run it locally. What's In My Fridge is currently hosted on [Heroku](https://whats-in-myfridge.herokuapp.com/).
+To install this app, please install the project dependencies and run it locally. What's In My Fridge is currently hosted on: 
+> [Heroku](https://whats-in-myfridge.herokuapp.com/).
 
 - More instructions on installation to come...
 - clone the repo
@@ -27,7 +28,8 @@ To install this app, please install the project dependencies and run it locally.
 
 ## Wireframes and User Stories
 
-More information and details can be found on [Trello](https://trello.com/b/t4oVJpvk/whats-in-my-fridge-app).
+More information and details can be found on: 
+> [Trello](https://trello.com/b/t4oVJpvk/whats-in-my-fridge-app).
 
 
 Data Model:
