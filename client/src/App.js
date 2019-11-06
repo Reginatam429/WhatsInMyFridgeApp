@@ -9,13 +9,15 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Homepage from './components/Hompage';
 //Login/SignUp
 import Login from './components/Login';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     
     <div className="App">
-       <Router>
       
+       <Router>
+       <Navbar />
         <div className="container">
             {/*Homepage Route*/}
             <Route path="/" exact component={Homepage} />
