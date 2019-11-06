@@ -1,11 +1,13 @@
 import React from 'react'
 import logo from '../assets/logo.png'
 import { NavLink } from 'react-router-dom';
+import '../App.css';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
-            
+        
+        <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+            <div className="container">
            {/* logo */}
             <span className="navbar-brand.mb-0.h1.mx-auto">
             <NavLink to="/">
@@ -24,7 +26,9 @@ const Navbar = () => {
                 </button>
             </NavLink>
             </form>
+            </div> 
         </nav>
+    
     )
 }
 
