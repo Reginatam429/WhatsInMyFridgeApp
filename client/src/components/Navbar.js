@@ -6,7 +6,7 @@ import '../App.css';
 const Navbar = () => {
     return (
         
-        <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+        <nav className="navbar navbar-expand-lg navbar-light bg-danger">
             <div className="container">
            {/* logo */}
             <span className="navbar-brand.mb-0.h1.mx-auto">
@@ -15,13 +15,13 @@ const Navbar = () => {
             </NavLink>
 
            {/* App Name */}
-            <NavLink to="/"><span className="navbar-brand mb-0 h1">WhatsInMyFridge</span></NavLink>
+            <NavLink to="/"><span className="navbar-brand mb-0 h1 ">WhatsInMyFridge</span></NavLink>
 
            {/* Login/SignUp Button */}
             </span>
             <form className="form-inline">
             <NavLink to="/login">
-                <button className="btn btn-sm btn-outline-success" type="button">
+                <button className="btn btn-sm btn-outline-warning" type="button">
                     Login / Sign Up
                 </button>
             </NavLink>

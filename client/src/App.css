@@ -7,3 +7,10 @@
     background-size: cover;
     height: 500px;
   }
+
+  /*Font Attributes*/
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
