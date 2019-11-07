@@ -2,13 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
-
+//Navbar
+import Navbar from './components/Navbar';
 //Homepage
 import Homepage from './components/Hompage';
 //Login/SignUp
 import Login from './components/Login';
-import Navbar from './components/Navbar';
-
+//User page
+import Userpage from './components/Userpage';
+//About Us
+import About from './components/About';
 function App() {
   return (
     
@@ -22,7 +25,13 @@ function App() {
 
             {/*Login/Signup Route*/}
             <Route path="/login" exact component={Login} />
-               
+
+            {/*Login/User Page*/}
+            <Route path="/user" exact component={Userpage} />
+
+            {/*Login/Signup Route*/}
+            <Route path="/about" exact component={About} />
+
         </div>
       </Router>
      
