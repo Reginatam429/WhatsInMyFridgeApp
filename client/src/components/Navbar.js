@@ -6,7 +6,7 @@ import '../App.css';
 const Navbar = () => {
     return (
         
-        <nav className="navbar navbar-expand-lg navbar-light bg-danger">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
            {/* logo */}
             <span className="navbar-brand.mb-0.h1.mx-auto">
