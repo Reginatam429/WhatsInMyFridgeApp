@@ -2,10 +2,47 @@
     background-color: grey;
 } */
 
+/* Error 404 styles */
+.errorh1{
+    font-weight: bold;
+}
+
+.sidebyside{
+    display:flex; 
+    flex-direction:row;
+}
+
+.centerpic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.center {
+    /* top: 50%;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 40px ;
+  }
+
+
+  /* Homepage Styles */
 .jumbotron {
     background-image: url("./assets/hpbanner1.png");
     background-size: cover;
     height: 500px;
+    background-repeat:no-repeat;
+
   }
 
   /*Font Attributes*/

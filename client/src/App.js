@@ -2,8 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
+
 //Navbar
 import Navbar from './components/Navbar';
+//Error404
+import Errorpg from './components/Errorpg';
 //Homepage
 import Homepage from './components/Hompage';
 //Login/SignUp
@@ -20,6 +23,9 @@ function App() {
        <Router>
        <Navbar />
         <div className="container">
+            {/*404 Error*/}
+            <Route path="/error" exact component={Errorpg} />
+
             {/*Homepage Route*/}
             <Route path="/" exact component={Homepage} />
 
@@ -41,3 +47,5 @@ function App() {
 }
 
 export default App;
+
+

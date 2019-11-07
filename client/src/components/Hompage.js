@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import hpbanner1 from '../assets/hpbanner1.png';
+//import hpbanner1 from '../assets/hpbanner1.png';
 
 
 // const divStyle = {
