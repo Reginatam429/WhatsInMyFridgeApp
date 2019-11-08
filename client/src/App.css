@@ -38,7 +38,7 @@
 
   /* Homepage Styles */
 .jumbotron {
-    background-image: url("./assets/hpbanner1.png");
+    background-image: url("./assets/carouselbanner.gif");
     background-size: cover;
     height: 500px;
     background-repeat:no-repeat;
