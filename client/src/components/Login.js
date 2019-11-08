@@ -1,11 +1,11 @@
 import React from 'react';
-
+import LoginButton from "./LoginButton"
 
 const Login = () => {
     return (
         <div>
          
-            <h1>This is my Login/Sign Up</h1>
+         <div>{LoginButton}</div>
         </div>
        
         

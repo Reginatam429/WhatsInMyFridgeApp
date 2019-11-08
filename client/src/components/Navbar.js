@@ -2,8 +2,10 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import { NavLink } from 'react-router-dom';
 import '../App.css';
+import { useAuth0 } from "../react-auth0-spa";
 
 const Navbar = () => {
+    const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
     return (
         
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,12 +21,28 @@ const Navbar = () => {
 
            {/* Login/SignUp Button */}
             </span>
+            
             <form className="form-inline">
-            <NavLink to="/login">
+            <div>
+                {!isAuthenticated && (
+                    <button className="btn btn-sm btn-outline-warning"
+                    onClick={() =>
+                        loginWithRedirect({ 
+                            // redirect_uri: 'http://localhost:3000'
+                        })
+                    }
+                    >
+                    Log in / Sign Up
+                    </button>
+                )}
+
+                {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+            </div>
+            {/* <NavLink to="/login">
                 <button className="btn btn-sm btn-outline-warning" type="button">
                     Login / Sign Up
                 </button>
-            </NavLink>
+            </NavLink> */}
             </form>
             </div> 
         </nav>
