@@ -18,6 +18,8 @@ import About from './components/About';
 //Private Policy
 import PrivatePolicy from './components/PrivatePolicy';
 
+
+
 function App() {
   return (
     
@@ -41,8 +43,8 @@ function App() {
             {/*Login/Signup Route*/}
             <Route path="/about" exact component={About} />
 
-            {/*Privacy Policy*/}
-            <Route path="/private-policy" exact component={PrivatePolicy} />
+             {/*Privacy Policy*/}
+             <Route path="/private-policy" exact component={PrivatePolicy} />
 
         </div>
       </Router>

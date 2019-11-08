@@ -7,8 +7,6 @@
     "node": "12.10.0"
   },
   "dependencies": {
-    "@auth0/auth0-spa-js": "^1.5.0",
-    "npm": "^6.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
