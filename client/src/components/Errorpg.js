@@ -17,6 +17,7 @@ const Errorpg = () => {
                 Recipe Search <br/>
                 <NavLink to="/user">User Page</NavLink> <br/>
                 <NavLink to="/about">About Us</NavLink> <br/>
+                <NavLink to="/private-policy">Private Policy</NavLink> <br/>
             </p>
             </div>
         </div>
