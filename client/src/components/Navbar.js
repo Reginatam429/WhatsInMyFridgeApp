@@ -20,6 +20,16 @@ const Navbar = () => {
                 <NavLink to="/"><span className="navbar-brand mb-0 h1 ">WhatsInMyFridge</span></NavLink>
                 </span>
 
+                {/* link to the home and profile pages */}
+                {isAuthenticated && (
+                            
+                    <NavLink to="/User">
+                        <span className="navbar-brand mb-0 h1 ">
+                            Profile
+                        </span>
+                    </NavLink>      
+                            )}
+
                  {/* Login/SignUp Button */}
                 <form className="form-inline">
                     <div>
@@ -35,7 +45,10 @@ const Navbar = () => {
                             </button>
                         )}
 
-                        {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+                        {isAuthenticated && <button className="btn btn-sm btn-outline-warning"onClick={() => 
+                            logout()}>Log out</button>}
+
+                        
                     </div>
                 </form>
             </div> 
