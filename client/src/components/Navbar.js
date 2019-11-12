@@ -10,40 +10,34 @@ const Navbar = () => {
         
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
-           {/* logo */}
-            <span className="navbar-brand.mb-0.h1.mx-auto">
-            <NavLink to="/">
-                <img src={logo} width="90" height="35" className="d-inline-block align-top" alt="logo" />
-            </NavLink>
+                {/* logo */}
+                <span className="navbar-brand.mb-0.h1.mx-auto">
+                <NavLink to="/">
+                    <img src={logo} width="90" height="35" className="d-inline-block align-top" alt="logo" />
+                </NavLink>
 
-           {/* App Name */}
-            <NavLink to="/"><span className="navbar-brand mb-0 h1 ">WhatsInMyFridge</span></NavLink>
+                {/* App Name */}
+                <NavLink to="/"><span className="navbar-brand mb-0 h1 ">WhatsInMyFridge</span></NavLink>
+                </span>
 
-           {/* Login/SignUp Button */}
-            </span>
-            
-            <form className="form-inline">
-            <div>
-                {!isAuthenticated && (
-                    <button className="btn btn-sm btn-outline-warning"
-                    onClick={() =>
-                        loginWithRedirect({ 
-                            // redirect_uri: 'http://localhost:3000'
-                        })
-                    }
-                    >
-                    Log in / Sign Up
-                    </button>
-                )}
+                 {/* Login/SignUp Button */}
+                <form className="form-inline">
+                    <div>
+                        {!isAuthenticated && (
+                            <button className="btn btn-sm btn-outline-warning"
+                            onClick={() =>
+                                loginWithRedirect({ 
+                                    // redirect_uri: 'http://localhost:3000'
+                                })
+                            }
+                            >
+                            Log in / Sign Up
+                            </button>
+                        )}
 
-                {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
-            </div>
-            {/* <NavLink to="/login">
-                <button className="btn btn-sm btn-outline-warning" type="button">
-                    Login / Sign Up
-                </button>
-            </NavLink> */}
-            </form>
+                        {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+                    </div>
+                </form>
             </div> 
         </nav>
     

@@ -2,8 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
+
 //auth0
 import { useAuth0 } from "./react-auth0-spa";
+
 
 //Navbar
 import Navbar from './components/Navbar';
@@ -17,6 +19,7 @@ import Login from './components/Login';
 import Userpage from './components/Userpage';
 //About Us
 import About from './components/About';
+
 //Private Policy
 import PrivatePolicy from './components/PrivatePolicy';
 
@@ -54,6 +57,7 @@ function App() {
 
             {/*Privacy Policy*/}
             <Route path="/private-policy" exact component={PrivatePolicy} />
+
 
         </div>
       </Router>

@@ -41,14 +41,15 @@
     background-image: url(
       "./assets/hpbanner1.png"
       );
+
     background-size: cover;
     height: 500px;
     background-repeat:no-repeat;
-
   }
 
   /*Font Attributes*/
 .navbar-brand {
+
     font-size: 20px;
     font-weight: bold;
     color: white;
