@@ -31,6 +31,7 @@ const Navbar = () => {
                             )}
 
                  {/* Login/SignUp Button */}
+                
                 <form className="form-inline">
                     <div>
                         {!isAuthenticated && (
@@ -46,7 +47,7 @@ const Navbar = () => {
                         )}
 
                         {isAuthenticated && <button className="btn btn-sm btn-outline-warning"onClick={() => 
-                            logout({returnTo:'http://localhost:3000'})}>Log out</button>}
+                            logout({returnTo:'http://localhost:3000/'})}>Log out</button>}
 
                         
                     </div>

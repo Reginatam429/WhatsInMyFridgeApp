@@ -53,10 +53,10 @@ function App() {
             <Route path="/private-policy" exact component={PrivatePolicy} />
 
             {/*Login/User Page*/}
-            <PrivateRoute path="/user" exact component={Userpage} />
+            <PrivateRoute path="/user" component={Userpage} />
 
            {/*Search Page*/}
-           <Route path="/searchpage" exact component={Searchpage} /> 
+           <PrivateRoute path="/searchpage" component={Searchpage} /> 
 
            {/*404 Error*/}
            <Route path="/error" exact component={Errorpg} />
