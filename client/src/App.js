@@ -41,6 +41,7 @@ function App() {
       
        <Router>
        <Navbar />
+       <div>
        <Switch>
 
             {/*Homepage Route*/}
@@ -63,6 +64,7 @@ function App() {
 
        
         </Switch>
+        </div>
       </Router>
      
     </div>

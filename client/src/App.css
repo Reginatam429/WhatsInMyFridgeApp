@@ -7,6 +7,8 @@
     font-weight: bold;
 }
 
+
+
 .sidebyside{
     display:flex; 
     flex-direction:row;
@@ -39,10 +41,10 @@
   /* Homepage Styles */
 .jumbotron {
      background-image: url( 
-      "./assets/hpbanner1.png"
+      "./assets/ingredientsbanner.png"
       );
 
-    background-size: cover;
+    background-size: 100;
     height: 500px;
     min-height: 300px;
     max-height: 500px;
@@ -51,6 +53,29 @@
     -moz-background-size: cover; 
     -o-background-size: cover; 
    
+  }
+
+  .banner-phrase{
+    font-weight: bold;
+    color: white;
+    font-size: 310%;
+    text-align: center; 
+  }
+
+  .banner-phrase2{
+    font-weight: bold;
+    color: white;
+    font-size: 150%;
+    text-align: center; 
+  }
+
+  .banner-square{
+    width: 400px;
+    background: rgba(0, 0, 0, 0.337); 
+    position: relative;
+    padding: 60px 50px 50px 50px;
+    margin: 5px;
+    filter: alpha(opacity=60);
   }
 
   /*Font Attributes*/
