@@ -38,13 +38,19 @@
 
   /* Homepage Styles */
 .jumbotron {
-    background-image: url(
+     background-image: url( 
       "./assets/hpbanner1.png"
       );
 
     background-size: cover;
     height: 500px;
-    background-repeat:no-repeat;
+    min-height: 300px;
+    max-height: 500px;
+    background-repeat:no-repeat ;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+   
   }
 
   /*Font Attributes*/

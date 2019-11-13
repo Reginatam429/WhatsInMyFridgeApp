@@ -37,7 +37,7 @@ const Navbar = () => {
                             <button className="btn btn-sm btn-outline-warning"
                             onClick={() =>
                                 loginWithRedirect({ 
-                                    // redirect_uri: 'http://localhost:3000'
+                                    //redirect_uri: 'http://localhost:3000'
                                 })
                             }
                             >
@@ -46,7 +46,7 @@ const Navbar = () => {
                         )}
 
                         {isAuthenticated && <button className="btn btn-sm btn-outline-warning"onClick={() => 
-                            logout()}>Log out</button>}
+                            logout({returnTo:'http://localhost:3000'})}>Log out</button>}
 
                         
                     </div>

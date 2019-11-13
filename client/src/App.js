@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 //import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
 
 //auth0
 import { useAuth0 } from "./react-auth0-spa";
-
+import PrivateRoute from "./components/PrivateRoute";
 
 //Navbar
 import Navbar from './components/Navbar';
@@ -13,10 +14,11 @@ import Navbar from './components/Navbar';
 import Errorpg from './components/Errorpg';
 //Homepage
 import Homepage from './components/Hompage';
-//Login/SignUp
-import Login from './components/Login';
+
 //User page
 import Userpage from './components/Userpage';
+//Recipe Search
+import Searchpage from './components/Searchpage';
 //About Us
 import About from './components/About';
 
@@ -39,18 +41,10 @@ function App() {
       
        <Router>
        <Navbar />
-        <div className="container">
-            {/*404 Error*/}
-            <Route path="/error" exact component={Errorpg} />
+       <Switch>
 
             {/*Homepage Route*/}
             <Route path="/" exact component={Homepage} />
-
-            {/*Login/Signup Route*/}
-            <Route path="/login" exact component={Login} />
-
-            {/*Login/User Page*/}
-            <Route path="/user" exact component={Userpage} />
 
             {/*Login/Signup Route*/}
             <Route path="/about" exact component={About} />
@@ -58,8 +52,17 @@ function App() {
             {/*Privacy Policy*/}
             <Route path="/private-policy" exact component={PrivatePolicy} />
 
+            {/*Login/User Page*/}
+            <PrivateRoute path="/user" exact component={Userpage} />
 
-        </div>
+           {/*Search Page*/}
+           <Route path="/searchpage" exact component={Searchpage} /> 
+
+           {/*404 Error*/}
+           <Route path="/error" exact component={Errorpg} />
+
+       
+        </Switch>
       </Router>
      
     </div>
