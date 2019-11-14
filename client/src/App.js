@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import ExternalApi from "./views/ExternalApi";
 //import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
 
@@ -43,6 +43,9 @@ function App() {
        <Navbar />
        <div>
        <Switch>
+
+            {/* route to the ExternalApi component */}
+            <PrivateRoute path="/external-api" component={ExternalApi} />
 
             {/*Homepage Route*/}
             <Route path="/" exact component={Homepage} />

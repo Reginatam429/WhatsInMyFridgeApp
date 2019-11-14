@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
 
+
 const Userpage = () => {
   const { loading, user } = useAuth0();
-
+  console.log("hi Mega");
   if (loading || !user) {
     return (
       <div>Loading...</div>

@@ -23,7 +23,7 @@ ReactDOM.render(
     client_id={config.clientId}
     redirect_uri={window.location.origin}
     onRedirectCallback={onRedirectCallback}
-    // audience={config.AUDIENCE}
+    audience={config.AUDIENCE}
 >   
     <App />
   </Auth0Provider>,

@@ -17,6 +17,15 @@ const pool = new Pool({
   ssl: true
 });
 
+
+const getUsers = (request, response) => {
+  pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json({result:results.rows})
+  })
+}
   
   const getUser = (request, response) => {
     const id = parseInt(request.params.id)
@@ -140,6 +149,7 @@ const pool = new Pool({
   }
 
   module.exports = {
+    getUsers,
     getUser,
     createUser,
     updateUser,

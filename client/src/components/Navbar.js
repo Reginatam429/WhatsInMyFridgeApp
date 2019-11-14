@@ -21,24 +21,26 @@ const Navbar = () => {
                 </span>
 
                 {/* link to the home and profile pages */}
-                {isAuthenticated && (
-                            
-                    <NavLink to="/User">
-                        <span className="navbar-brand mb-0 h1 ">
-                            Profile
+                {
+                    isAuthenticated && (
+                        <span className="navbar-brand mb-0">
+                        <NavLink to="/user">Profile</NavLink>&nbsp;
+                        {/* NEW - Add a link to the /external-api route */}
+                        <NavLink to="/external-api">External API</NavLink>
                         </span>
-                    </NavLink>      
-                            )}
+                    )
+                }
+
 
                  {/* Login/SignUp Button */}
                 
-                <form className="form-inline">
+               
                     <div>
                         {!isAuthenticated && (
                             <button className="btn btn-sm btn-outline-warning"
                             onClick={() =>
                                 loginWithRedirect({ 
-                                    //redirect_uri: 'http://localhost:3000'
+                                    redirect_uri: 'http://localhost:3000'
                                 })
                             }
                             >
@@ -46,12 +48,12 @@ const Navbar = () => {
                             </button>
                         )}
 
-                        {isAuthenticated && <button className="btn btn-sm btn-outline-warning"onClick={() => 
-                            logout({returnTo:'http://localhost:3000/'})}>Log out</button>}
+                        {isAuthenticated && <button className="btn btn-sm btn-outline-warning" onClick={() => 
+                            logout({returnTo:'http://localhost:3000'})}>Log out</button>}
 
                         
                     </div>
-                </form>
+             
             </div> 
         </nav>
     
