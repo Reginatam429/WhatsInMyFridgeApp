@@ -10,6 +10,8 @@ import PrivateRoute from "./components/PrivateRoute";
 
 //Navbar
 import Navbar from './components/Navbar';
+//Footer
+import Footer from './components/Footer';
 //Error404
 import Errorpg from './components/Errorpg';
 //Homepage
@@ -69,7 +71,7 @@ function App() {
         </Switch>
         </div>
       </Router>
-     
+      <Footer/> 
     </div>
 
   );

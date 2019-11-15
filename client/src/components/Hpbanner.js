@@ -25,8 +25,8 @@ let phrases = [
     "REDUCE FOOD WASTE.",
     "FEELING HUNGRY?",
     "LEARN TO COOK.",
-    "SAVE MONEY.",
-    "AVOID SPOILAGE",
+    "SAVE YOUR MONEY.",
+    "AVOID FOOD SPOILAGE",
     "YOU HAVE FOOD AT HOME.",
     "FIND A NEW RECIPE"
 ]
@@ -45,7 +45,9 @@ let timer = 0;
             <div className="banner-square">
                 <h1 className="banner-phrase display-2">{bannerMessage}</h1> <br/>
                 <h5 className="banner-phrase2">Use What's In Your Fridge.</h5>
-                <button type="button" class="btn btn-outline-light bth-lg"><NavLink to="/searchpage">Search Here</NavLink></button>
+                <NavLink to="/searchpage">
+                    <button type="button" class="btn btn-outline-light bth-lg">Search Here</button>
+                </NavLink>
             </div>
         </div>
     </div>   

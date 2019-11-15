@@ -85,6 +85,12 @@
     text-align: center;
   }
 
+  .aboutUs {
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+  }
 
   /*Font Attributes*/
 .navbar-brand {
@@ -94,7 +100,8 @@
     color: white;
 }
 
-@media (max-width: 700px) {
+/*Media Query*/
+@media (max-width: 650px) {
   .banner-square {  
     text-align: center;
     position: center;
@@ -114,7 +121,10 @@
   }
 
   .aboutUs {
-   
     justify-content: center;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
   }
 }
