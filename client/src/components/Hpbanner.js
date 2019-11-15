@@ -29,17 +29,15 @@ let phrases = [
     "AVOID FOOD SPOILAGE",
     "YOU HAVE FOOD AT HOME.",
     "FIND A NEW RECIPE"
-]
-
-let timer = 0;
+];
  
- const Hpbanner = () => {
+const Hpbanner = () => {
 
-    const imageUrl = images[Math.floor(Math.random() * images.length)];
+   const imageUrl = images[Math.floor(Math.random() * images.length)];
 
    const bannerMessage = phrases[Math.floor(Math.random() * phrases.length)];
 
-    return (
+   return (
     <div className='hp'>
         <div className='banner' style={{backgroundImage: `url(${imageUrl})` }} >
             <div className="banner-square">
