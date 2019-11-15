@@ -39,7 +39,7 @@
 
 
   /* Homepage Styles */
-.jumbotron {
+/* .jumbotron {
      background-image: url( 
       "./assets/hpbanner2.png"
       );
@@ -53,6 +53,13 @@
     -moz-background-size: cover; 
     -o-background-size: cover; 
    
+  } */
+
+  .banner {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
   }
 
   .banner-phrase{
