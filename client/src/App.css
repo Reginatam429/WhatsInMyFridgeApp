@@ -1,6 +1,17 @@
-/* #hp {
-    background-color: grey;
-} */
+@import url('https://fonts.googleapis.com/css?family=Catamaran:700|Montserrat:700&display=swap');
+
+/* NavBar */
+.navbar{
+    padding: .8rem;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-Link {
+  font-size: 1.1em !important;
+}
 
 /* Error 404 styles */
 .errorh1{
@@ -39,65 +50,41 @@
 
 
   /* Homepage Styles */
-/* .jumbotron {
-     background-image: url( 
-      "./assets/hpbanner2.png"
-      );
-
-    background-size: 100;
-    height: 500px;
-    min-height: 300px;
-    max-height: 500px;
-    background-repeat:no-repeat ;
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -o-background-size: cover; 
-   
-  } */
 
   .banner {
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: absolute;
   }
 
   .banner-phrase{
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: white;
-    font-size: 310%;
-    text-align: center; 
+    font-size: 70px;
+    text-align: center;
   }
 
   .banner-phrase2{
+    font-family: 'Catamaran', sans-serif;
     font-weight: bold;
     color: white;
     font-size: 150%;
     text-align: center; 
+    letter-spacing: .05rem;
   }
 
   .banner-square{
-    width: 400px;
-    background: rgba(0, 0, 0, 0.337); 
+    width: 500px;
+    background: rgba(11, 6, 6, 0.337); 
     position: relative;
-    padding: 60px 50px 50px 50px;
-    margin: 5px;
+    padding: 50px 50px 50px 50px;
     filter: alpha(opacity=60);
+    text-align: center;
   }
 
-  .fade-in{
-    -webkit-animation: fade-in 2s ease;
-    -moz-animation: fade-in ease-in-out 2s both;
-    -ms-animation: fade-in ease-in-out 2s both;
-    -o-animation: fade-in ease-in-out 2s both;
-    animation: fade-in 2s ease;
-    visibility: visible;
-  }
-  
-  @-webkit-keyframes fade-in{0%{opacity:0;} 100%{opacity:1;}}
-  @-moz-keyframes fade-in{0%{opacity:0} 100%{opacity:1}}
-  @-o-keyframes fade-in{0%{opacity:0} 100%{opacity:1}}
-  @keyframes fade-in{0%{opacity:0} 100%{opacity:1}}
 
   /*Font Attributes*/
 .navbar-brand {
@@ -105,4 +92,29 @@
     font-size: 20px;
     font-weight: bold;
     color: white;
+}
+
+@media (max-width: 700px) {
+  .banner-square {  
+    text-align: center;
+    position: center;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .banner-phrase{
+    text-align: center;
+    font-size: 50px;
+  }
+  .banner {
+    background-position: center center;
+    justify-content: center;
+    
+  }
+
+  .aboutUs {
+   
+    justify-content: center;
+  }
 }

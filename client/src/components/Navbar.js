@@ -8,8 +8,9 @@ const Navbar = () => {
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
     return (
         
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container">
+        <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
+            <div className="container-fluid">
+
                 {/* logo */}
                 <span className="navbar-brand.mb-0.h1.mx-auto">
                 <NavLink to="/">
@@ -21,6 +22,21 @@ const Navbar = () => {
                 </span>
 
                 {/* link to the home and profile pages */}
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    </ul>
+                </div>
+               
                 {
                     isAuthenticated && (
                         <span className="navbar-brand mb-0">
