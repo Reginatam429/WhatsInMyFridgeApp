@@ -4,6 +4,9 @@ import ExternalApi from "./views/ExternalApi";
 //import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
 
+//Provider
+import { Provider } from './components/Context';
+
 //auth0
 import { useAuth0 } from "./react-auth0-spa";
 import PrivateRoute from "./components/PrivateRoute";
@@ -40,10 +43,10 @@ function App() {
   return (
     
     <div className="App">
-      
+      <Provider>
        <Router>
        <Navbar />
-       <div>
+    
        <Switch>
 
             {/* route to the ExternalApi component */}
@@ -69,9 +72,10 @@ function App() {
 
        
         </Switch>
-        </div>
+       
       </Router>
-      <Footer/> 
+      <Footer/>
+      </Provider>
     </div>
 
   );

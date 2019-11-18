@@ -1,13 +1,11 @@
 import React from 'react';
-
+import Recipes from './Api/Recipes';
 
 const Searchpage = () => {
     return (
-        <div>
-         
-            <h1>This is my recipe Search page</h1>
-        </div>
-       
+        <React.Fragment>
+            <Recipes />
+        </React.Fragment>
         
     )
 }
