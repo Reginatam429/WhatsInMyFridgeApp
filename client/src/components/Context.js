@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Context = React.createContext();
@@ -10,8 +10,13 @@ export class Provider extends Component {
     };
 
     componentDidMount(){
-        axios.get(`https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=kale+chicken&app_id=${process.env.REACT_APP_EM_ID}&app_key=${process.env.REACT_APP_EM_KEY}&from=10`)
-            .then(res => console.log(res.data))
+        axios.get(
+            `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=kale+chicken&app_id=${process.env.REACT_APP_EM_ID}&app_key=${process.env.REACT_APP_EM_KEY}&from=10`
+            )
+            .then(res => {
+                // console.log(res.data);
+                this.setState({recipes_list: res.data.hits});
+            })
             .catch(err => console.log(err));
     }
 
