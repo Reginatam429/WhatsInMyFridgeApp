@@ -11,7 +11,7 @@ export class Provider extends Component {
 
     componentDidMount(){
         axios.get(
-            `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=kale+chicken&app_id=${process.env.REACT_APP_EM_ID}&app_key=${process.env.REACT_APP_EM_KEY}&from=10`
+            `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=kale+chicken&app_id=${process.env.REACT_APP_EM_ID}&app_key=${process.env.REACT_APP_EM_KEY}&from=9`
             )
             .then(res => {
                 //console.log(res.data);

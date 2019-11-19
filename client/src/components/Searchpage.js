@@ -4,7 +4,9 @@ import Recipes from './Api/Recipes';
 const Searchpage = () => {
     return (
         <React.Fragment>
+             <div className="container-fluid padding">
             <Recipes />
+            </div>
         </React.Fragment>
         
     )
