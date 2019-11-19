@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div>
          
-         <body className="d-flex flex-column">
+         <div className="d-flex flex-column">
             <div id="page-content">
                 <div className="container text-center">
                 <div className="row justify-content-center">
@@ -21,7 +21,7 @@ const Footer = () => {
                 <small>Copyright &copy; WhatsInYourFridge 2019</small>
                 </div>
             </footer>
-         </body>
+         </div>
         </div>
        
         

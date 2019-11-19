@@ -44,7 +44,7 @@ const Hpbanner = () => {
                 <h1 className="banner-phrase display-2">{bannerMessage}</h1> <br/>
                 <h5 className="banner-phrase2">Use What's In Your Fridge.</h5>
                 <NavLink to="/searchpage">
-                    <button type="button" class="btn btn-outline-light bth-lg">Search Here</button>
+                    <button type="button" className="btn btn-outline-light bth-lg">Search Here</button>
                 </NavLink>
             </div>
         </div>

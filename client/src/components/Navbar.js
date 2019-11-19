@@ -27,25 +27,21 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ml-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to="/searchpage">Recipes</NavLink>
-                    </li>
-                    </ul>
+                    {
+                        isAuthenticated && (
+                            <span className="navbar-brand mb-0 ml-auto">
+                                
+                                <NavLink to="/user">Profile</NavLink>&nbsp;
+                                {/* NEW - Add a link to the /external-api route */}
+                                <NavLink to="/external-api">External API</NavLink>
+                                <NavLink to="/searchpage">Recipes</NavLink>
+                               
+                            </span>
+                        )
+                    }
                 </div>
                
-                {
-                    isAuthenticated && (
-                        <span className="navbar-brand mb-0">
-                        <NavLink to="/user">Profile</NavLink>&nbsp;
-                        {/* NEW - Add a link to the /external-api route */}
-                        <NavLink to="/external-api">External API</NavLink>
-                        </span>
-                    )
-                }
+                
 
 
                  {/* Login/SignUp Button */}
