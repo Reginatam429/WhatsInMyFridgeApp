@@ -13,8 +13,8 @@ class Search extends Component {
                    return (
                        <div className='card card-body mb-4 p-4'>
                            <h1 className='display-4 text-center'>
-                                <i class="fas fa-utensils"></i>
-                                Search for Recipes
+                                <i class="fas fa-utensils fa-fw"></i>  
+                                 Search for Recipes
                            </h1>
                            <p className='lead text-center'>
                                Get some recipes for your ingredients
