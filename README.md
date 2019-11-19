@@ -4,7 +4,7 @@
 
 What's In My Fridge is an application that allows users to save money by using their fridge ingredients to find delicious recipes and prevent food waste!
 
-> https://whats-in-myfridge.herokuapp.com/
+> https://whatsinmyfridgeapp.herokuapp.com/
 
 ## Techstack
 
