@@ -1,23 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
 
  const Recipe = (props) => {
     const { recipe } = props;
     return (
-        <div className='col-md-4'>
-            <div className='card'>
+       
+        <div className='col-md-3'>
+            <div className='card h-100 d-flex align-items-stretch'>
 
             {/* Card image */}
             <img className="card-img-top" src={recipe.image} alt="Recipe Image" />
 
             {/* Card content */}
-            <div className="card-body">
+            <div className="card-body text-center">
 
             {/* Title */}
             <h4 className="card-title"><a>{recipe.label}</a></h4>
+            <hr/>
              {/* Text */}
-            <p className="card-text">Number of Calories:{recipe.calories}KCal</p>
+            <p className="card-text">Calories:{(recipe.calories.toFixed(1))}KCal</p>
             {/* Button */}
-            <a href="#" className="btn btn-primary">Button</a>
+            <a href={`${recipe.url}`} className="btn btn-warning btn-rounded">See More</a>
 
             </div>
             </div>
