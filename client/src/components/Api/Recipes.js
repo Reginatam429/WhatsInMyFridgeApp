@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { Consumer } from '../Context';
+import { Consumer } from '../../Context';
+import Spinner from '../Loading'
 
 class Recipes extends Component {
     render () {
@@ -7,11 +8,16 @@ class Recipes extends Component {
     return (
         <Consumer>
             {value => {
-                console.log(value);
-                return  <h1>Recipes </h1>
+               const { recipes_list } = value;
+               console.log(value);
+
+               if(recipes_list === undefined || recipes_list.length === 0) {
+                    return <Spinner />
+               } else {
+                    return <h1>Recipes loaded!</h1>;
+               }
             }}
         </Consumer>  
-        
     );
   }
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+//Provider
+import { Provider } from './Context';
+//external api
 import ExternalApi from "./views/ExternalApi";
 //import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
-
-//Provider
-import { Provider } from './components/Context';
 
 //auth0
 import { useAuth0 } from "./react-auth0-spa";
@@ -30,24 +30,27 @@ import About from './components/About';
 //Private Policy
 import PrivatePolicy from './components/PrivatePolicy';
 
+//Spinner
+import Spinner from './components/Loading';
+
 function App() {
 
   const { loading } = useAuth0();
 
   if (loading) {
     return (
-      <div>Loading...</div>
+      <Spinner />
     );
   }
 
   return (
     
-    <div className="App">
       <Provider>
        <Router>
-       <Navbar />
+       <React.Fragment>
+        <Navbar />
     
-       <Switch>
+        <Switch>
 
             {/* route to the ExternalApi component */}
             <PrivateRoute path="/external-api" component={ExternalApi} />
@@ -69,15 +72,12 @@ function App() {
 
            {/*404 Error*/}
            <Route path="/error" exact component={Errorpg} />
-
        
-        </Switch>
-       
+          </Switch>
+        </React.Fragment>
       </Router>
       <Footer/>
       </Provider>
-    </div>
-
   );
 }
 
