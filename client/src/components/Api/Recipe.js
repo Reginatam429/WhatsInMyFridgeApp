@@ -19,6 +19,7 @@ import { Link } from 'react-router-dom'
             <hr/>
              {/* Text */}
             <p className="card-text">Calories:{(recipe.calories.toFixed(1))}KCal</p>
+            <p className="card-text">Ingredients: {(recipe.ingredients.length)} total</p>
             {/* Button */}
             <a href={`${recipe.url}`} className="btn btn-warning btn-rounded">See More</a>
 
