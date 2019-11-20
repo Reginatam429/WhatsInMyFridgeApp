@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
-
+import Ingredient from './Database/Ingredient';
 
 const Userpage = () => {
   const { loading, user } = useAuth0();
-  console.log("hi Mega");
   if (loading || !user) {
     return (
       <div>Loading...</div>
@@ -12,13 +11,17 @@ const Userpage = () => {
   }
 
   return (
-    <Fragment>
-      <img src={user.picture} alt="Profile" />
-
-      <h2>{user.name}</h2>
-      <p>{user.email}</p>
-      <code>{JSON.stringify(user, null, 2)}</code>
-    </Fragment>
+    <React.Fragment>
+      <div className="container-fluid padding">
+          <br/>
+          <h2>Welcome back, {user.given_name}</h2>
+          <p>{user.email}</p>
+          <code>{JSON.stringify(user, null, 2)}</code>
+          <Ingredient />
+               
+      </div>
+      
+    </React.Fragment>
   );
 };
 

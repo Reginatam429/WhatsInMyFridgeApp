@@ -38,7 +38,7 @@ class Search extends Component {
                    return (
                        <div className='card card-body mb-4 p-4'>
                            <h1 className='display-4 text-center'>
-                                <i class="fas fa-utensils fa-fw"></i>  
+                                <i className="fas fa-utensils fa-fw"></i>  
                                  Search for Recipes
                            </h1>
                            <p className='lead text-center'>
@@ -56,7 +56,7 @@ class Search extends Component {
                                    /> 
                                </div>
                                     <button className='btn btn-warning btn-lrg btn-block mb-5' type='submit'>
-                                        <i class="fa fa-search fa-fw"></i>
+                                        <i className="fa fa-search fa-fw"></i>
                                         Search
                                     </button>
                            </form>

@@ -8,13 +8,13 @@ import React from 'react';
             <div className='card h-100 d-flex align-items-stretch'>
 
             {/* Card image */}
-            <img className="card-img-top" src={recipe.image} alt="Recipe Image" />
+            <img className="card-img-top" src={recipe.image} alt="Recipe" />
 
             {/* Card content */}
             <div className="card-body text-center">
 
             {/* Title */}
-            <h4 className="card-title"><a>{recipe.label}</a></h4>
+            <h4 className="card-title">{recipe.label}</h4>
             <hr/>
              {/* Text */}
             <p className="card-text">Calories: {(recipe.calories.toFixed(1))} KCal</p>

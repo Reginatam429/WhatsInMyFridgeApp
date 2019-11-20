@@ -24,8 +24,7 @@ import Homepage from './components/Hompage';
 import Userpage from './components/Userpage';
 //Recipe Search
 import Searchpage from './components/Searchpage';
-//Recipe Page
-import Recipepage from './components/Api/Recipepage';
+
 //About Us
 import About from './components/About';
 
@@ -71,9 +70,6 @@ function App() {
 
            {/*Search Page*/}
            <PrivateRoute path="/searchpage" component={Searchpage} />
-
-          {/*Recipe Page*/}
-          <PrivateRoute path="/recipepage/:label" component={Recipepage} /> 
 
            {/*404 Error*/}
            <Route path="/error" exact component={Errorpg} />

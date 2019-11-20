@@ -13,7 +13,7 @@ import Hpbanner from '../components/Hpbanner';
 
            <div className="row aboutUs text-center">
             <div className="col-12">
-                <i class="fas fa-seedling fa-3x"></i>
+                <i className="fas fa-seedling fa-3x"></i>
                 <h1 className="display-4">About Us</h1>
              <hr width="50%"/>
             </div>
