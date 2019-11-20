@@ -25,9 +25,6 @@ import Userpage from './components/Userpage';
 //Recipe Search
 import Searchpage from './components/Searchpage';
 
-//About Us
-import About from './components/About';
-
 //Private Policy
 import PrivatePolicy from './components/PrivatePolicy';
 
@@ -58,9 +55,6 @@ function App() {
 
             {/*Homepage Route*/}
             <Route path="/" exact component={Homepage} />
-
-            {/*Login/Signup Route*/}
-            <Route path="/about" exact component={About} />
 
             {/*Privacy Policy*/}
             <Route path="/private-policy" exact component={PrivatePolicy} />
