@@ -2,8 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import IngredientList from './IngredientList';
 
-class Awesome extends React.Component {
 
+class Awesome extends React.Component {
+    
     state = {ingredients: []};
 
     componentDidMount () {

@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import Awesome from "./Awesome";
 import axios from "axios";
 
 const Userpage = () => {
   const { loading, user } = useAuth0();
+
+  const [ingredients, setIngredients] = useState();
+  const [userInfo, setUser] = useState();
 
   useEffect(() => {
     const initializeUser = async() =>{
@@ -17,8 +20,9 @@ const Userpage = () => {
           username: user.given_name
         }
       });
-
-      console.log(mytest.data);
+      console.log(mytest.data.ingredient);
+      setIngredients(mytest.data.ingredient);
+      setUser(mytest.data.user)
     }
     if (user) initializeUser()
   }, [user]);
@@ -37,7 +41,7 @@ const Userpage = () => {
           <p>{user.email}</p>
           <code>{JSON.stringify(user, null, 2)}</code>
           <br />
-          <Awesome />
+          <Awesome ingredients={ingredients} user={userInfo}/>
         </div>
       </div>
     </div>

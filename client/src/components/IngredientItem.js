@@ -14,7 +14,7 @@ const IngredientItem = ({ ingredient }) => {
           <p className="card-subtitle mb-2 text-muted">Category: {ingredient.category}</p>
           <p className="card-text">Amount: {ingredient.amount}</p>
           <a href="#" className="card-link">Remove Item</a>
-          <a href="#" class="card-link">Edit Item</a>
+          <a href="#" className="card-link">Edit Item</a>
         </div>
       </div>
     
