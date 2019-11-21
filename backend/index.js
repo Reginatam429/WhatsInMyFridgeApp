@@ -65,6 +65,8 @@ app.get("/users/:id/recipes", db.getFavRecipe);
 app.post("/users/:id/recipes", db.createFavRecipe);
 app.put("/users/:id/recipes/:id", db.updateFavRecipe);
 
+app.post("/test", db.doTest);
+
 app.listen(process.env.PORT || port, () => {
   console.log(`Refridgerator is running on port ${port}.`);
 });
