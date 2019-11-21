@@ -1,11 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-//Provider
+
+import Awesome from './components/Awesome';
+
+//Providers
 import { Provider } from './Context';
+
 //external api
 import ExternalApi from "./views/ExternalApi";
+//import Backend from './components/Api/Backend';
+
 //import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
+
 
 //auth0
 import { useAuth0 } from "./react-auth0-spa";
@@ -31,6 +38,9 @@ import PrivatePolicy from './components/PrivatePolicy';
 //Spinner
 import Spinner from './components/Loading';
 
+//Test
+import Test from './components/Testpage';
+
 function App() {
 
   const { loading } = useAuth0();
@@ -43,7 +53,7 @@ function App() {
 
   return (
     
-      <Provider>
+    <Provider>
        <Router>
        <React.Fragment>
         <Navbar />
@@ -67,12 +77,18 @@ function App() {
 
            {/*404 Error*/}
            <Route path="/error" exact component={Errorpg} />
-       
+
+           {/*Test*/}
+           <Route path="/test" exact component={Test} />
+
+            {/*aWeSOME*/}
+           <Route path="/awesome" exact component={Awesome} />
+
           </Switch>
         </React.Fragment>
       </Router>
       <Footer/>
-      </Provider>
+    </Provider>
   );
 }
 
