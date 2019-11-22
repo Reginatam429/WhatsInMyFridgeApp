@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
+
 import Awesome from './components/Awesome';
 
 //Providers
@@ -40,6 +42,8 @@ import Spinner from './components/Loading';
 
 //Test
 import Test from './components/Testpage';
+
+
 
 function App() {
 

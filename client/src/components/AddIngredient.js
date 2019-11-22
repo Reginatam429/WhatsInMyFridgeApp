@@ -17,32 +17,32 @@ class AddIngredient extends React.Component {
     this.setState({ ingredient_name: event.target.value })
   };
   onInputCategory = (event) => {
-    this.setState( { category: event.target.value })
+    this.setState({ category: event.target.value })
   };
   onInputAmount = (event) => {
-    this.setState(   { amount: event.target.value })
+    this.setState({ amount: event.target.value })
   };
 
   //callback to handle submission of forms   
   onFormSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:5000/users/4/ingredients', {
+    axios.post(`https://whats-in-my-fridge-api.herokuapp.com/users/${this.props.userID}/ingredients`, {
       user_id: this.state.user_id, 
       ingredient_name: this.state.ingredient_name,
       category: this.state.category,
       amount: this.state.amount
     })
-    .then(function (response) {
-      console.log(response);
+    .then(res => {
+      alert('New Ingredient Added!');
+      this.setState({ ingredient_name: '' });
+      this.setState({ category: '' });
+      this.setState({ amount: '' });
+      console.log(res);
     })
     .catch(function (error) {
       console.log(error);
     });
 
-    //callback from parent component 
-    this.onFormSubmit(this.state.ingredient_name);
-    this.onFormSubmit(this.state.category);
-    this.onFormSubmit(this.state.amount);
   };
 
   render() {

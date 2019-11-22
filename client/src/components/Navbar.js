@@ -31,9 +31,9 @@ const Navbar = () => {
                         isAuthenticated && (
                             <span className="navbar-brand mb-0 ml-auto">
                                 
-                                <NavLink to="/user">Profile</NavLink>&nbsp;
+                                <NavLink to="/user">My Fridge</NavLink>&nbsp;
                                 {/* NEW - Add a link to the /external-api route */}
-                                <NavLink to="/external-api">External API</NavLink>
+                                {/* <NavLink to="/external-api">External API</NavLink> */}
                                 <NavLink to="/searchpage">Recipes</NavLink>
                                
                             </span>
@@ -54,7 +54,7 @@ const Navbar = () => {
                                 loginWithRedirect({ 
                                     redirect_uri: 
                                        'http://localhost:3000/user'
-                                       //'https://whatsinmyfridgeapp.herokuapp.com/'
+                                      // 'https://whatsinmyfridgeapp.herokuapp.com/'
                                 })
                             }
                             >

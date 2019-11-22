@@ -1,8 +1,23 @@
 
 import React from 'react';
+import axios from 'axios';
 
 
 const IngredientItem = ({ ingredients }) => {
+
+  const removeItem =(event) => {
+    event.preventDefault();
+    axios.delete(`https://whats-in-my-fridge-api.herokuapp.com/users/${ingredients.user_id}/ingredients/${ingredients.id}`)
+    .then(res => {
+      alert('Ingredient Removed!');
+      console.log(res);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  };
+  
   return(
    
       <div className='card border-warning mb-3 text-center w-50'>
@@ -13,7 +28,7 @@ const IngredientItem = ({ ingredients }) => {
         <h4 className="card-title">{ingredients.ingredient_name}</h4>  
           <p className="card-subtitle mb-2 text-muted">Category: {ingredients.category}</p>
           <p className="card-text">Amount: {ingredients.amount}</p>
-          <a href="#" className="card-link">Remove Item</a>
+          <button onClick={removeItem} className="card-link">Remove Item</button>
         </div>
       </div>
     
