@@ -47,10 +47,10 @@ class AddIngredient extends React.Component {
 
   render() {
     return(
-      <div className="form-group container">
+      <div className="form-group container addIngredient">
         <form onSubmit={this.onFormSubmit} className="createIngredientForm" >
           <div>
-            <label> Add Ingredient </label>
+            <label className="label-text"> Add Ingredient </label>
             <input 
               placeholder="Ex. Chicken"
               type="text" 
@@ -61,7 +61,7 @@ class AddIngredient extends React.Component {
             />
           </div>
           <div>
-            <label> Category </label>
+            <label className="label-text"> Category </label>
             <input 
               placeholder="Ex. Poultry"
               type="text" 
@@ -72,7 +72,7 @@ class AddIngredient extends React.Component {
             />
           </div>
           <div>
-            <label> Amount </label>
+            <label className="label-text"> Amount </label>
             <input 
               placeholder="Ex. 5lbs"
               type="text" 
@@ -82,7 +82,7 @@ class AddIngredient extends React.Component {
               onChange={this.onInputAmount}
             />
           </div>
-          <button className="btn btn-primary">Submit</button>
+          <button className="btn btn-primary addButton">Submit</button>
         </form>
         
       </div>

@@ -111,6 +111,57 @@
   width: 100%;
 }
 
+.addIngredient {
+  width: 360px;
+  padding: 2% 0 0;
+  margin: auto;
+  
+}
+
+.createIngredientForm{
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 400px;
+  margin: 0 auto 30px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.addButton {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(255, 206, 82);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.addButton:hover,.addButton:active,.addButton:focus {
+  background:  rgb(255, 245, 99);;
+}
+
+.label-text{
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #808080;
+  line-height: 1.2;
+  text-align: right;
+  top: 14px;
+  left: -105px;
+  width: 100px;
+  height: 20px;
+
+}
+
+
 /*Media Query*/
 @media (max-width: 650px) {
   .banner-square {  
