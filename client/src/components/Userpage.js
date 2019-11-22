@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import Awesome from "./Awesome";
 import axios from "axios";
-import AddIngredient from './AddIngredient';
-import IngredientList from './IngredientList';
+//import AddIngredient from './AddIngredient';
+//import IngredientList from './IngredientList';
 
 const Userpage = () => {
   const { loading, user } = useAuth0();
 
-  const [ingredients, setIngredients] = useState();
-  const [userInfo, setUser] = useState();
+  const [ingredient, setIngredients] = useState();
+  const [userID, setUser] = useState();
 
   useEffect(() => {
     const initializeUser = async() =>{
@@ -22,9 +22,11 @@ const Userpage = () => {
           username: user.given_name
         }
       });
-      console.log(mytest.data.ingredient);
-      setIngredients(mytest.data.ingredients);
+      //console.log(mytest.data.ingredient);
+      //console.log(mytest.data.user[0].id);
+      setIngredients(mytest.data.ingredient);
       setUser(mytest.data.user)
+      //console.log(userID);
     }
     if (user) initializeUser()
   }, [user]);
@@ -34,21 +36,16 @@ const Userpage = () => {
   }
 
   return (
-    <div className="container-fluid padding">
+    <div className="container-fluid padding ">
       <div className="row wording text-center">
-        <div className="col-12">
+        <div className="col-12 ">
           <br />
           <i className="far fa-user-circle fa-7x"></i>
           <h2>Welcome back, {user.given_name}</h2>
           <p>{user.email}</p>
-          <code>{JSON.stringify(user, null, 2)}</code>
+          {/* <code>{JSON.stringify(user, null, 2)}</code> */}
           <br />
-          {/* <Awesome ingredients={ingredients} user={userInfo}/> */}
-          <h2>Add to Fridge:</h2>
-                <AddIngredient />
-                <h2>Currently in Fridge:</h2>
-                <br />
-                <IngredientList  ingredients={ingredients} user={userInfo} />
+          <Awesome ingredients={ingredient} userID={userID}/>
         </div>
       </div>
     </div>

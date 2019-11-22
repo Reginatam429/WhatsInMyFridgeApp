@@ -1,46 +1,63 @@
 import React from 'react';
+import axios from 'axios';
 
 class AddIngredient extends React.Component {
   
-  state = { 
-      user_id: '',
+  constructor(props) {
+    super(props);
+    this.state = { 
+      user_id: '4',
       ingredient_name: '',
       category: '',
       amount: '' 
     };
-
+  }
   // change the state using .setState  
-  onInputChange = (event) => {
-    this.setState(
-        { user_id: event.target.value },
-        { ingredient_name: event.target.value },
-        { category: event.target.value },
-        { amount: event.target.value } 
-        );
+  onInputName = (event) => {
+    this.setState({ ingredient_name: event.target.value })
+  };
+  onInputCategory = (event) => {
+    this.setState( { category: event.target.value })
+  };
+  onInputAmount = (event) => {
+    this.setState(   { amount: event.target.value })
   };
 
   //callback to handle submission of forms   
   onFormSubmit = (event) => {
-    // prevents browser from automatically submitting the form 
     event.preventDefault();
+    axios.post('http://localhost:5000/users/4/ingredients', {
+      user_id: this.state.user_id, 
+      ingredient_name: this.state.ingredient_name,
+      category: this.state.category,
+      amount: this.state.amount
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 
     //callback from parent component 
-    this.props.onFormSubmit(this.state.term);
+    this.onFormSubmit(this.state.ingredient_name);
+    this.onFormSubmit(this.state.category);
+    this.onFormSubmit(this.state.amount);
   };
 
   render() {
     return(
-      <div class="form-group">
-        <form onSubmit={this.onFormSubmit} className="ui form" >
+      <div className="form-group container">
+        <form onSubmit={this.onFormSubmit} className="createIngredientForm" >
           <div>
             <label> Add Ingredient </label>
             <input 
               placeholder="Ex. Chicken"
               type="text" 
-              value={this.state.term}
+              value={this.state.ingredient_name}
 
               // create & use a callback method to handle changes
-              onChange={this.onInputChange}
+              onChange={this.onInputName}
             />
           </div>
           <div>
@@ -48,10 +65,10 @@ class AddIngredient extends React.Component {
             <input 
               placeholder="Ex. Poultry"
               type="text" 
-              value={this.state.term}
+              value={this.state.category}
 
               // create & use a callback method to handle changes
-              onChange={this.onInputChange}
+              onChange={this.onInputCategory}
             />
           </div>
           <div>
@@ -59,14 +76,15 @@ class AddIngredient extends React.Component {
             <input 
               placeholder="Ex. 5lbs"
               type="text" 
-              value={this.state.term}
+              value={this.state.amount}
 
               // create & use a callback method to handle changes
-              onChange={this.onInputChange}
+              onChange={this.onInputAmount}
             />
           </div>
+          <button className="btn btn-primary">Submit</button>
         </form>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        
       </div>
     );
   }
