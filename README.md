@@ -48,7 +48,7 @@ User Flow:
 ## Difficulties/Unsolved Problems
 -the orignal recipe API the app utilized was shut down in November 2019 and had to be replaced by the Edamam API.
 -The heroku version of the app is not as functional as the local version.
--the ingredient list is hard coded to take in only user 4's list as the user id is not passed down to the components.
+-the search components only work locally, not on the deployed version.
 
 ##Future Development
 
