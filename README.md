@@ -46,15 +46,15 @@ User Flow:
 
 
 ## Difficulties/Unsolved Problems
--the orignal recipe API the app utilized was shut down in November 2019 and had to be replaced by the Edamam API.
--The heroku version of the app is not as functional as the local version.
--the ingredient list is hard coded to take in only user 4's list as the user id is not passed down to the components.
+- the orignal recipe API the app utilized was shut down in November 2019 and had to be replaced by the Edamam API.
+- The heroku version of the app is not as functional as the local version.
+- the ingredient list is hard coded to take in only user 4's list as the user id is not passed down to the components.
 
 ## Future Development
 
--Build out favoriting system for recipes.
--Add a feature allowing users to select ingredients from their ingredient list to the search bar.
--When a user adds an ingredient to their fridge, they will be able to add an expiration date which will allow the app to track when ingredients are about to expire.
--Users should be able to edit their ingredients.
--Users have the option to add friends/other users and share fridge information if they wish to.
--Users could add a photo for their profile.
+- Build out favoriting system for recipes.
+- Add a feature allowing users to select ingredients from their ingredient list to the search bar.
+- When a user adds an ingredient to their fridge, they will be able to add an expiration date which will allow the app to track when ingredients are about to expire.
+- Users should be able to edit their ingredients.
+- Users have the option to add friends/other users and share fridge information if they wish to.
+- Users could add a photo for their profile.
