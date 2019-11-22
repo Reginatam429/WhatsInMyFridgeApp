@@ -50,7 +50,7 @@ User Flow:
 -The heroku version of the app is not as functional as the local version.
 -the ingredient list is hard coded to take in only user 4's list as the user id is not passed down to the components.
 
-##Future Development
+## Future Development
 
 -Build out favoriting system for recipes.
 -Add a feature allowing users to select ingredients from their ingredient list to the search bar.
