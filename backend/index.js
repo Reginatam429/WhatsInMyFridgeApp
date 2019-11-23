@@ -20,7 +20,7 @@ app.use(
 
 // mega: 
 // define middleware to handle cors
-if (process.env.NODE_ENV==="development"){
+// if (process.env.NODE_ENV==="development"){
   app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
@@ -30,7 +30,7 @@ if (process.env.NODE_ENV==="development"){
   );
   next();
 });
-}
+
 
 //production
 //app.use(compression())

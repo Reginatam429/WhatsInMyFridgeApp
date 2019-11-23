@@ -10,12 +10,12 @@ const Userpage = () => {
 
   const [ingredient, setIngredients] = useState();
   const [userID, setUser] = useState();
-
+  console.log(axios.baseURL);
   useEffect(() => {
     const initializeUser = async() =>{
       const mytest = await axios({
         method: 'POST',
-        url: 'http://localhost:5000/test',
+        url: 'https://whats-in-my-fridge-api.herokuapp.com/test',
         data: {
           email: user.email,
           auth0_id: user.sub,
@@ -25,8 +25,8 @@ const Userpage = () => {
       //console.log(mytest.data.ingredient);
       //console.log(mytest.data.user[0].id);
       setIngredients(mytest.data.ingredient);
-      setUser(mytest.data.user)
-      //console.log(userID);
+      setUser(mytest.data.user[0].id)
+     
     }
     if (user) initializeUser()
   }, [user]);
@@ -35,6 +35,8 @@ const Userpage = () => {
     return <div>Loading...</div>;
   }
 
+  console.log(userID);
+
   return (
     <div className="container-fluid padding ">
       <div className="row wording text-center">
@@ -42,7 +44,6 @@ const Userpage = () => {
           <br />
           <i className="far fa-user-circle fa-7x"></i>
           <h2>Welcome back, {user.given_name}</h2>
-          <p>{user.email}</p>
           {/* <code>{JSON.stringify(user, null, 2)}</code> */}
           <br />
           <Awesome ingredients={ingredient} userID={userID}/>

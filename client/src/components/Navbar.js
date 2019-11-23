@@ -8,60 +8,123 @@ const Navbar = () => {
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
     return (
         
-        <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
-            <div className="container-fluid">
+        // <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
 
-                {/* logo */}
-                <span className="navbar-brand.mb-0.h1.mx-auto">
-                <NavLink to="/">
-                    <img src={logo} width="90" height="35" className="d-inline-block align-top" alt="logo" />
-                </NavLink>
+        //         {/* logo */}
+                
 
-                {/* App Name */}
-                <NavLink to="/"><span className="navbar-brand mb-0 h1 ">WhatsInMyFridge</span></NavLink>
-                </span>
+        //         <NavLink to="/">
+        //             <img src={logo} width="90" height="35" className="d-inline-block align-top" alt="logo" />
+        //         </NavLink>
 
-                {/* link to the home and profile pages */}
+        //         {/* App Name */}
+        //         <a class="navbar-brand" href="#">WhatsInMyFridge</a>
+                
+                
 
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    {
+        //         {/* link to the home and profile pages */}
+
+        //         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        //         <span class="navbar-toggler-icon"></span>
+        // </button>
+        //         <div className="collapse navbar-collapse" id="navbarNav">
+        //             {
+        //                 isAuthenticated && (
+                           
+        //                    <span className="navbar-brand  ml-auto style-color:#fb3f00 text-decoration:none">
+    
+        //                      <NavLink to="/user">My Fridge</NavLink>&nbsp;
+        //                      <NavLink to="/searchpage">Recipes</NavLink>
+                           
+        //                    </span>
+                           
+        //                 )
+        //             }
+        //         </div>
+        //          {/* Login/SignUp Button */}
+                
+               
+        //             <div>
+        //                 {!isAuthenticated && (
+        //                     <button className="btn btn-sm btn-outline-warning "
+        //                     onClick={() =>
+        //                         loginWithRedirect({ 
+        //                             redirect_uri: 
+        //                               'http://localhost:3000/user'
+        //                               //'https://whatsinmyfridgeapp.herokuapp.com/'
+        //                         })
+        //                     }
+        //                     >
+        //                     Log in / Sign Up
+        //                     </button>
+        //                 )}
+
+        //                 {isAuthenticated && <button className="btn btn-sm btn-outline-warning " onClick={() => 
+        //                     logout({returnTo:
+        //                         'http://localhost:3000'
+        //                         //'https://whatsinmyfridgeapp.herokuapp.com/'
+        //                     })}>
+        //                             Log out
+        //                         </button>}
+
+                        
+        //             </div>
+             
+            
+        // </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <NavLink to="/">
+                   <img src={logo} width="90" height="35" className="d-inline-block align-top" alt="logo" />
+          </NavLink>
+
+          <NavLink to="/"><a class="navbar-brand" href="#">WhatsInMyFridge</a></NavLink>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+           
+            
+            {
                         isAuthenticated && (
-                            <span className="navbar-brand mb-0 ml-auto">
-                                
-                                <NavLink to="/user">Profile</NavLink>&nbsp;
-                                {/* NEW - Add a link to the /external-api route */}
-                                <NavLink to="/external-api">External API</NavLink>
-                                <NavLink to="/searchpage">Recipes</NavLink>
-                               
-                            </span>
+                            <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li className="nav-item active">
+                           
+    
+                                <NavLink to="/user">
+                                <a class="navbar-brand" href="#">
+                                    My Fridge
+                                    </a>
+                                </NavLink>
+                             </li>
+                             <li className="nav-item active">
+                             <NavLink to="/searchpage">
+                             <a class="navbar-brand" href="#">
+                                 Search Recipes
+                                 </a></NavLink>
+                             </li> 
+                           </ul>
+                           
                         )
                     }
-                </div>
-               
-                
 
-
-                 {/* Login/SignUp Button */}
-                
-               
-                    <div>
-                        {!isAuthenticated && (
+            {!isAuthenticated && (
+               <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                             <button className="btn btn-sm btn-outline-warning "
                             onClick={() =>
                                 loginWithRedirect({ 
                                     redirect_uri: 
-                                       'http://localhost:3000/user'
-                                       //'https://whatsinmyfridgeapp.herokuapp.com/'
+                                      'http://localhost:3000/user'
+                                      //'https://whatsinmyfridgeapp.herokuapp.com/'
                                 })
                             }
                             >
                             Log in / Sign Up
                             </button>
+                            </ul> 
                         )}
-
+                        
                         {isAuthenticated && <button className="btn btn-sm btn-outline-warning " onClick={() => 
                             logout({returnTo:
                                 'http://localhost:3000'
@@ -69,12 +132,8 @@ const Navbar = () => {
                             })}>
                                     Log out
                                 </button>}
-
-                        
-                    </div>
-             
-            </div> 
-        </nav>
+        </div>
+</nav>
     
     )
 }
