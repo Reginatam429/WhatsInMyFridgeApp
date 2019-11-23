@@ -20,8 +20,8 @@ const IngredientItem = ({ ingredients }) => {
   
   return(
    
-      <div className='card border-warning mb-3 text-center w-50'>
-        <div className="card-header text-secondary">
+      <div className='card border-warning mb-3 text-center card-block '>
+        <div className="card-header text-secondary ">
             <h6><i className="fa fa-apple-alt"></i> Fridge Item</h6>
           </div>
         <div className='Card-body'> 

@@ -44,7 +44,6 @@ const Userpage = () => {
           <br />
           <i className="far fa-user-circle fa-7x"></i>
           <h2>Welcome back, {user.given_name}</h2>
-          <p>{user.email}</p>
           {/* <code>{JSON.stringify(user, null, 2)}</code> */}
           <br />
           <Awesome ingredients={ingredient} userID={userID}/>

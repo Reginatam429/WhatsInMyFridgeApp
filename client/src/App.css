@@ -118,6 +118,9 @@
   
 }
 
+.card-header{
+  background-color: rgba(187, 255, 109, 0.8);
+}
 .createIngredientForm{
   position: relative;
   z-index: 1;
@@ -185,8 +188,36 @@
   .wording {
     justify-content: center;
     padding-top: 10px;
-    padding-right: 30px;
+    padding-right: 10px;
     padding-bottom: 10px;
-    padding-left: 30px;
+    padding-left: 10px;
   }
+
+  .addIngredient{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  }
+
+  .createIngredientForm{
+   
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 450px;
+    margin: 5px auto 30px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  .label-text{
+    font-size: 10px; 
+    color: #808080;
+  line-height: 1.2;
+  text-align: right;
+  width: 100px;
+  height: 20px;
+  }
+
 }
