@@ -5,7 +5,7 @@ import Search from './Api/Search';
 const Searchpage = () => {
     return (
         <React.Fragment>
-             <div className="container-fluid padding">
+             <div className="search-content container-fluid padding">
                 <Search />
                 <Recipes />
             </div>

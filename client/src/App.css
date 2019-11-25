@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:700|Montserrat:700&display=swap');
 
-
+/* Recipe Searchpage */
+.search-content {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+   
+}
 
 /* NavBar */
 .navbar{
@@ -18,6 +24,7 @@
 /* Error 404 styles */
 .errorh1{
     font-weight: bold;
+    
 }
 
 
@@ -33,6 +40,17 @@
     margin-right: auto;
     width: 50%;
   }
+
+.center-error {
+    top: 50%;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 40px ;
+}
 
 .center {
     /* top: 50%;
@@ -104,6 +122,16 @@
 }
 
 /* UserPage */
+.userpage-header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+.userpage-welcome {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: rgb(254, 186, 59);
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -112,7 +140,7 @@
 }
 
 .addIngredient {
-  width: 360px;
+  width: 450px;
   padding: 2% 0 0;
   margin: auto;
   
@@ -148,15 +176,16 @@
 }
 
 .addButton:hover,.addButton:active,.addButton:focus {
-  background:  rgb(255, 245, 99);;
+  background:  rgb(161, 205, 75);;
 }
 
 .label-text{
-  font-family: Poppins-Regular;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   font-size: 15px;
-  color: #808080;
+  color: #3f3f3f;
   line-height: 1.2;
-  text-align: right;
+  text-align: left;
   top: 14px;
   left: -105px;
   width: 100px;
@@ -164,6 +193,65 @@
 
 }
 
+/* Scrollbar */
+
+.scrollbar {
+  overflow: scroll;
+  width: 800px;
+  max-Height: 400px;
+  border: 3px solid rgb(244, 190, 13);
+  padding: 2px;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background: #00000033;
+}
+
+.fa-trash-alt {
+  padding:8px;
+  margin-right:4px;
+}
+.icon-btn {
+  padding: 1px 15px 3px 2px;
+  border-radius:50px;
+}
+
+/* custom colors  */
+.scrollbar-primary::-webkit-scrollbar {
+  background-color: #F5F5F5;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #4285F4;
+}
+
+.scrollbar-young-passion::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+  border-radius: 10px; }
+  
+  .scrollbar-young-passion::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5; }
+  
+  .scrollbar-young-passion::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff8177), color-stop(0%, #ff867a),
+  color-stop(21%, #ff8c7f), color-stop(52%, #f99185), color-stop(78%, #cf556c), to(#b12a5b));
+  background-image: -webkit-linear-gradient(left, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%,
+  #b12a5b 100%);
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%,
+  #b12a5b 100%); }
 
 /*Media Query*/
 @media (max-width: 650px) {
@@ -212,12 +300,39 @@
   }
 
   .label-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     font-size: 10px; 
     color: #808080;
-  line-height: 1.2;
-  text-align: right;
-  width: 100px;
-  height: 20px;
+    line-height: 1.2;
+    text-align: left;
+    width: 100px;
+    height: 20px;
   }
+
+  /* scrollbar */
+.scrollbar{
+  position: center;
+  text-align: center;
+  border: 3px solid rgb(244, 190, 13);
+  padding: 2px;
+  display: center;
+  margin: auto;
+  width: 100%;
+  max-Height: 400px;
+}
+
+/* 404 */
+.sidebyside{
+  display:flex; 
+  flex-direction:column-reverse;
+}
+.centerpic {
+  display: block;
+  text-align:center;
+  object-fit: contain;
+  width: 100%;
+  height:auto;
+}
 
 }

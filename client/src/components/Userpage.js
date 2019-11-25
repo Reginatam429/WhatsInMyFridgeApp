@@ -42,8 +42,9 @@ const Userpage = () => {
       <div className="row wording text-center">
         <div className="col-12 ">
           <br />
-          <i className="far fa-user-circle fa-7x"></i>
-          <h2>Welcome back, {user.given_name}</h2>
+          <i className="far fa-user-circle fa-8x"></i>
+          <br />
+          <h2 className="userpage-welcome">Welcome back, {user.given_name}</h2>
           {/* <code>{JSON.stringify(user, null, 2)}</code> */}
           <br />
           <Awesome ingredients={ingredient} userID={userID}/>

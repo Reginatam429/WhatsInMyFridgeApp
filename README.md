@@ -49,6 +49,7 @@ User Flow:
 - the orignal recipe API the app utilized was shut down in November 2019 and had to be replaced by the Edamam API.
 - The heroku version of the app is not as functional as the local version as Edamam's API only works localy.
 - The homepage search button is not redirecting to login as it originally did.
+- Users are able to add multiples of the same ingredient when they shouldn't be allowed to.
 
 ## Future Development
 

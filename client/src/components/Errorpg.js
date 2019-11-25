@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Errorpg = () => {
     return (
         <div className="sidebyside">
-        <div className="center">
+        <div className="center-error">
             <div>
             <h1 className="errorh1">Uh Oh!</h1>
             <p>
@@ -14,7 +14,7 @@ const Errorpg = () => {
             </p>
             <p text-align="left">
                 <NavLink to="/">Homepage</NavLink> <br/>
-                Recipe Search <br/>
+                <NavLink to="/searchpage">Recipe Search </NavLink> <br/>
                 <NavLink to="/user">User Page</NavLink> <br/>
                 <NavLink to="/private-policy">Private Policy</NavLink> <br/>
             </p>

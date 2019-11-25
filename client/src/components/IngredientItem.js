@@ -28,7 +28,10 @@ const IngredientItem = ({ ingredients }) => {
         <h4 className="card-title">{ingredients.ingredient_name}</h4>  
           <p className="card-subtitle mb-2 text-muted">Category: {ingredients.category}</p>
           <p className="card-text">Amount: {ingredients.amount}</p>
-          <button onClick={removeItem} className="card-link">Remove Item</button>
+          <button onClick={removeItem} className="btn icon-btn btn-danger">
+          <i className="far fa-trash-alt fa-fw"></i>
+             Remove
+            </button>
         </div>
       </div>
     
