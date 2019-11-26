@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAuth0 } from "../react-auth0-spa";
 import Awesome from "./Awesome";
 import axios from "axios";
-//import AddIngredient from './AddIngredient';
-//import IngredientList from './IngredientList';
+import Background from '../assets/userpageBG.png';
 
 const Userpage = () => {
   const { loading, user } = useAuth0();
@@ -38,19 +37,21 @@ const Userpage = () => {
   console.log(userID);
 
   return (
-    <div className="container-fluid padding ">
-      <div className="row wording text-center">
+    
+      
+    <div className="container-fluid padding" >
+      <div className="row wording text-center bg" style={{backgroundImage: `url(${Background})` }} >
         <div className="col-12 ">
           <br />
           <i className="far fa-user-circle fa-8x"></i>
           <br />
           <h2 className="userpage-welcome">Welcome back, {user.given_name}</h2>
-          {/* <code>{JSON.stringify(user, null, 2)}</code> */}
           <br />
           <Awesome ingredients={ingredient} userID={userID}/>
         </div>
       </div>
     </div>
+   
   );
 };
 

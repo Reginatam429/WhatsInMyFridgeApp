@@ -34,6 +34,7 @@ const IngredientItem = ({ ingredients }) => {
             </button>
         </div>
       </div>
+      
     
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import IngredientList from './IngredientList';
 import AddIngredient from './AddIngredient';
 import ScrollBarPage from './Scrollbar';
 

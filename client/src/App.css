@@ -8,6 +8,11 @@
    
 }
 
+.search-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
 /* NavBar */
 .navbar{
     padding: .8rem;
@@ -122,6 +127,16 @@
 }
 
 /* UserPage */
+
+.bg {
+  
+  height: 50%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+  
+  }
+
 .userpage-header {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -335,4 +350,13 @@
   height:auto;
 }
 
+/* userpage */
+.bg {
+  
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: auto;
+  
+  }
 }

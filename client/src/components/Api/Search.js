@@ -37,11 +37,11 @@ class Search extends Component {
                    const { dispatch } = value;
                    return (
                        <div className='card card-body mb-4 p-4'>
-                           <h1 className='display-4 text-center'>
+                           <h1 className='display-4 text-center search-text'>
                                 <i className="fas fa-utensils fa-fw"></i>  
                                  Search for Recipes
                            </h1>
-                           <p className='lead text-center'>
+                           <p className='lead text-center search-text'>
                                Get some recipes for your ingredients:
                            </p>
                            <form onSubmit={this.findRecipe.bind(this, dispatch)}>

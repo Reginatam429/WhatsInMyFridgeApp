@@ -2,9 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
-
-import Awesome from './components/Awesome';
-
 //Providers
 import { Provider } from './Context';
 
@@ -74,10 +71,10 @@ function App() {
             <Route path="/private-policy" exact component={PrivatePolicy} />
 
             {/*Login/User Page*/}
-            <PrivateRoute path="/user" component={Userpage} />
+            <PrivateRoute path="/user" exact component={Userpage} />
 
            {/*Search Page*/}
-           <PrivateRoute path="/searchpage" component={Searchpage} />
+           <PrivateRoute path="/searchpage" exact component={Searchpage} />
 
            {/*404 Error*/}
            <Route path="/error" exact component={Errorpg} />
@@ -85,13 +82,14 @@ function App() {
            {/*Test*/}
            <Route path="/test" exact component={Test} />
 
-            {/*aWeSOME*/}
-           <Route path="/awesome" exact component={Awesome} />
+            
 
           </Switch>
+          <Footer/>
         </React.Fragment>
+       
       </Router>
-      <Footer/>
+     
     </Provider>
   );
 }
